@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 // Define schema
 var Schema = mongoose.Schema;
+var uniqueValidator = require('mongoose-unique-validator');
 
 var SomeModelSchema = new Schema({
     eggs: {
@@ -14,14 +15,22 @@ var SomeModelSchema = new Schema({
         enum: ['Coffee', 'Tea', 'Water',]
     },
     name:{
-        type:{
-            type:String,
-            unique:[true,"用户存在"],
-            required:true
-        }
 
-    }
+        type: String,
+        unique:[true,'alll ext']
+
+
+
+
+        }
 });
+// SomeModelSchema.plugin(uniqueValidator,function (err) {
+//     console.log('-------------',err)
+//     console.log(11111111)
+//
+// });
+
+
 
 // Compile model from schema
 var SomeModel = mongoose.model('aomeModel', SomeModelSchema );
