@@ -1,1 +1,6 @@
 node_modules/
+.gitignore
+.idea/inspectionProfiles/
+.idea/vcs.xml
+
+public/javascripts/
